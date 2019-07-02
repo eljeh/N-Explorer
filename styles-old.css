@@ -1,0 +1,18 @@
+.button-left-icon {
+  margin-left: -20px;
+}
+
+.blue {
+  background-color: #005eb8;
+  border: 1px solid #000;
+  border-bottom: 5px solid #000!important;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rating>span.active {
+  color: gold;
+}

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- External -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Internal -->
+  <link rel="stylesheet" type="text/css" href="categoryIcons/flaticon.css">
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Projects
+      </a>
+      <div id="projectList" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      </div>
+      <h5 id="selectedProject" class="text-white"></h5>
+    </nav>
+
+    <div class="jumbotron">
+      <h1 class="display-4 text-break">Welcome to the Neighborhood!</h1>
+      <p class="lead">Click on a category to see what's nearby your next home.</p>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-12 col-lg-9">
+
+        <div id="map" style="min-width: 100%; min-height: 420px; height: 100%; position: relative; overflow: hidden;">
+        </div>
+
+      </div>
+      <div class="col-12 col-lg-3">
+
+
+
+        <div class="btn-group-vertical btn-block btn-group-lg" role="group" aria-label="Boardwalk neighborhood explorer categories">
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="transportation">
+            <i class="button-left-icon flaticon-bus"></i>
+            Public Transit
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="restaurant_cafe">
+            <i class="button-left-icon flaticon-dinner"></i>
+            Restaurants
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="grocery_or_supermarket">
+            <i class="button-left-icon flaticon-shopping-cart"></i>
+            Grocery
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="atm">
+            <i class="button-left-icon flaticon-atm"></i>
+            Bank/ATM
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="medical">
+            <i class="button-left-icon flaticon-medical-kit"></i>
+            Medical
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="school">
+            <i class="button-left-icon flaticon-university-campus"></i>
+            Schools
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="parks_recreation">
+            <i class="button-left-icon flaticon-tree"></i>
+            Parks &amp; Recreation
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="entertainment">
+            <i class="button-left-icon flaticon-cheers"></i>
+            Entertainment
+          </button>
+          <button type="button" class="btn btn-outline-primary blue text-left" role="button" aria-pressed="true"
+            data-category-group="attractions">
+            <i class="button-left-icon flaticon-binoculars"></i>
+            Attractions
+          </button>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col">
+
+        <div class="card text-center">
+
+          <div class="card-header text-nowrap">
+            <a href="https://www.walkscore.com/how-it-works/" target="_blank">Walk Score<sup>®</sup></a>
+          </div>
+
+          <div class="card-body">
+            <a id="walkscorelink" href="https://www.walkscore.com/" target="_blank"><strong><span
+                  id="walkscore">100</span></strong></a>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col">
+        
+        <div class="card text-center">
+          <div class="card-header text-nowrap">
+            <a href="https://www.walkscore.com/how-it-works/" target="_blank">Transit Score<sup>®</sup></a>
+          </div>
+          <div class="card-body">
+            <a id="transitscorelink" href="https://www.walkscore.com/" target="_blank"><strong><span
+                  id="transitscore">100</span></strong></a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <div class="card-header text-nowrap">
+            Directions
+          </div>
+          <div class="card-body">
+            <a href="https://www.google.ca/maps/place/19489 Seton Crescent SE #130, Calgary, AB T3M 1T4, Canada"
+              target="_blank">
+              <i class="flaticon-road"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INFO WINDOW TEMPLATE -->
+  <script id="template-info-window" type="text/template">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img
+              src="{{PHOTO_URL}}"
+              class="card-img" alt="{{NAME}}">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title">{{NAME}}</h4>
+              <h5 class="rating">{{RATINGS}}</h5>
+              <h5 class="open-now">{{OPEN_NOW}}</h5>
+              <address>
+                {{ADDRESS}}<br>
+                <a class="card-link" href="tel:{{PHONE}}">{{PHONE}}</a>
+                <a class="card-link" href="{{WEBSITE}}" target="_blank">Website</a>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+ </script>
+  <!-- DEFAULT INFO WINDOW TEMPLATE -->
+  <script id="template-project-window" type="text/template">
+  <div class="card mb-3" style="display: none; max-width: 540px;">
+   <div class="row no-gutters">
+    <div class="col">
+     <div class="card-body">
+      <h5 class="card-title">{{PROJECT_NAME}</h5>
+      <p class="card-text">{{PROJECT_PHONE}}</p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!--Bwalk API Key AIzaSyB1PaZ5hi4cCxmytVeZ_wfv-R5xBv_waaA -->
+  <!-- ESSEX API Key  AIzaSyDZUXfv2E1crCqQLWkM0LEeRztM3d8g2Sg -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUXfv2E1crCqQLWkM0LEeRztM3d8g2Sg&libraries=places&callback=initialize"></script>
+
+
+  <script src="info-window-manager.js"></script>
+  <script src="marker-manager.js"></script>
+
+  <script src="fakes/projects.js"></script>
+  <script>
+
+    var templateInfoWindow = document.getElementById("template-info-window");
+    var templateInfoWindowHtml = templateInfoWindow.innerHTML;
+
+    var map = null;
+    var placeService = null;
+    var infoWindowManager = null;
+    var markerManager = null;
+
+    var markers = [];
+    var selectedCategory = null;
+    var selectedProject = null;
+    var selectedLatLng = null;
+    var selectedMarker = null;
+    var defaultMarker = null;
+    var openInfoWindow = null;
+
+
+
+    var typeMap = {
+      'restaurant_cafe': {
+        types: ['cafe', 'restaurant'],
+        icon: 'restaurant_black.png'
+      }
+      ,
+      'grocery_or_supermarket': {
+        types: ['grocery_or_supermarket'],
+        icon: 'shopping_black.png'
+      }
+      ,
+      'atm': {
+        types: ['atm'],
+        icon: 'bank_black.png'
+      }
+      ,
+      'medical': {
+        types: ['doctor', 'hospital'],
+        icon: 'hospital_black.png'
+      }
+      ,
+      'school': {
+        types: ['school'],
+        icon: 'school_black.png'
+      }
+      ,
+      'transportation': {
+        types: ['airport', 'bus_station', 'subway_station', 'taxi_stand', 'train_station', 'transit_station'],
+        icon: 'bus_black.png'
+      }
+      ,
+      'parks_recreation': {
+        types: ['park'],
+        icon: 'park_black.png'
+      }
+      ,
+      'entertainment': {
+        types: ['movie_theater', 'night_club', 'casino', 'bowling_alley', 'stadium'],
+        icon: 'entertainment_black.png'
+      }
+      ,
+      'attractions': {
+        types: ['amusement_park', 'aquarium', 'casino', 'museum', 'stadium', 'zoo'],
+        icon: 'attractions_black.png'
+      }
+      ,
+      'default': {
+        types: [],
+        icon: 'generic.png'
+      }
+    };
+
+    function getWalkScore(address, lat, lng, callback) {
+      var address = encodeURI(address);
+      //http://api.walkscore.com/score?format=json&address=30%20Auburn%20Bay%20St%20SE,%20Calgary,%20AB%20T3M%202M5&lat=50.884929&lon=-113.948434&wsapikey=5ce2c8c8d0532279d3a9cdd94b5fef0c
+      var url = 'http://api.walkscore.com/score?callback=?&format=json&transit=1&bike=1&wsapikey=5ce2c8c8d0532279d3a9cdd94b5fef0c&address=' + address + '&lat=' + lat + '&lon=' + lng;
+      $.getJSON(url, callback);
+    }
+
+    function buildProjectList() {
+      var items = projects.map(function (project) {
+        return '<button class="dropdown-item" data-lat="' + project.lattitude + '" data-lng="' + project.longitude + '" data-phone="' + project.officeNumber + '" onclick="changeProject(' + project.projectId + ')">' + project.projectName + '</button>';
+      });
+      document.getElementById('projectList').innerHTML = items.join('');
+    }
+
+    function changeProject(id) {
+      markerManager.clearMarkers();
+
+      if (selectedMarker) selectedMarker.setMap(null);
+
+      selectedProject = projects.filter(function (project) { return project.projectId === id })[0];
+      selectedLatLng = new google.maps.LatLng(selectedProject.lattitude, selectedProject.longitude);
+      map.setCenter(selectedLatLng);
+
+      selectedMarker = new google.maps.Marker({
+        map: map,
+        position: selectedLatLng,
+        animation: google.maps.Animation.DROP,
+        icon: {
+          url: 'img/bwalk_logo.svg',
+          size: new google.maps.Size(200, 200),
+          scaledSize: new google.maps.Size(48, 48),
+          anchor: new google.maps.Point(16, 16),
+          labelOrigin: new google.maps.Point(16, 16)
+        },
+      });
+
+      selectedMarker.addListener('click', function () {
+        placeService.getDetails({ reference: place.reference }, function (placeDetails) {
+          var infowindow = new google.maps.InfoWindow({
+            content: createInfoWindowContent(placeDetails)
+          });
+          infowindow.open(map, marker);
+        });
+      });
+
+      document.getElementById('selectedProject').innerHTML = selectedProject.projectName;
+
+
+      // walk score API isn't well done
+      // getWalkScore('30 Auburn Bay St SE, Calgary, AB T3M 2M5', selectedProject.lattitude, selectedProject.longitude, function (data) {
+      //   document.getElementById('walkscore').innerHTML = data.walkscore;
+      //   document.getElementById('walkscorelink').href = data.ws_link;
+      //   document.getElementById('transitscore').innerHTML = data.transit.score;
+      //   document.getElementById('transitscorelink').href = data.ws_link;
+      // });
+
+    }
+
+    function initialize() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14
+      });
+      placeService = new google.maps.places.PlacesService(map);
+      infoWindowManager = new InfoWindowManager(templateInfoWindowHtml);
+      markerManager = new MarkerManager(map, placeService, infoWindowManager);
+
+      handleCategoryChanges();
+      buildProjectList();
+      changeProject(393);
+    }
+
+    function handleCategoryChanges() {
+      document.querySelectorAll('button.btn').forEach(function (element) {
+        element.addEventListener('click', function (event) {
+          markerManager.clearMarkers();
+
+          var groupKey = event.target.attributes['data-category-group'].nodeValue;
+          var typeInfo = typeMap[groupKey];
+          var request = {
+            location: selectedLatLng,
+            radius: 5000,
+            types: typeInfo.types
+          };
+
+          placeService.nearbySearch(request, function (results, status) {
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+              for (var i = 0; i < results.length; i++) {
+                markerManager.createMarker(results[i], 'markerIcons/' + typeInfo.icon);
+              }
+            }
+          });
+        });
+      });
+    }
+
+  </script>
+</body>
+
+</html>

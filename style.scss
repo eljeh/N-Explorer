@@ -1,0 +1,287 @@
+.demo-heading {
+	width: 100%;
+	text-align: center;
+	height: 100%;
+	padding-top: 0;
+	@media screen and (min-width: 767px){
+		margin-top: 3%;
+		margin-left: 7rem;
+	}
+}
+
+header,
+.lifestyle-branding {
+	overflow: visible;
+}
+
+a[target=_blank]::after {
+	content: none;
+	margin-left: auto;
+	margin-top: auto;
+}
+
+.dropdown-menu.show {
+	width: 255px;
+	height: 530px;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.nav-link {
+	color: #005eb8;
+	@media screen and (min-width: 767px){
+		color: white;
+	}
+
+	&:hover {
+		color: grey;
+	}
+}
+
+.brand-bar.w-map-button .view-map-btn::after {
+	display: none;
+}
+
+
+
+
+#map,
+.map-holder {
+	position: relative;
+	height: 550px;
+	width: 100%;
+
+	img {
+		margin: 0;
+	}
+}
+
+.neighbourhood-container {
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	z-index: 1;
+}
+
+.card {
+	background-color: white;
+	padding: 0.75rem 1rem;
+	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+	transition: all .4s ease;
+	z-index: 1;
+
+	&.card-category {
+		margin-bottom: 0;
+		width: 288px;
+		box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+		z-index: 11;
+		transition: all .4s ease;
+		bottom: 0;
+
+		.btn-outline-primary {
+			border: 1px solid #005eb8;
+			border-bottom: 5px solid #005eb8;
+			border-radius: 0 !important;
+			color: #005eb8;
+			display: inline-block;
+			font-family: "futura-pt", sans-serif;
+			font-weight: 700;
+			text-decoration: none;
+			text-transform: uppercase;
+		
+			&:hover {
+				border: 1px solid #004c97;
+				border-bottom: 5px solid #004c97;
+				background: #005eb8;
+				color: #fff;
+			}
+		}
+
+		.btn-group-vertical>.btn {
+			min-height: 48px;
+			margin-bottom: 4px !important;
+			transition: all .4s ease;
+
+			&+.btn {
+				margin-top: 4px !important;
+				margin-bottom: 4px !important;
+				min-height: 48px;
+			}
+		}
+
+	}
+
+	&.card-top-amenity {
+		display: none;
+		margin-bottom: 0.5rem;
+		width: 288px;
+		box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+		transition: all .4s ease;
+
+		.walkscore {
+			margin-top: -10px;
+			margin-bottom: 0;
+			width: 288px;
+
+			.list-inline-item {
+				text-align: center;
+				margin-right: 0 !important;
+				margin-bottom: -0.4rem;
+				transition: all .4s ease;
+				z-index: 1;
+				color: #005eb8;
+				display: inline-block;
+				font-family: "futura-pt", sans-serif;
+				text-decoration: none;
+				text-transform: uppercase;
+				height: 48px;
+				width: 80px;
+				padding: 4px;
+
+				.ratingTitle {
+					display: inline;
+					font-weight: 700;
+					font-size: 0.5rem;
+				}
+
+				.rating {
+					display: inline;
+					font-weight: 700;
+					font-size: 1rem;
+
+				}
+
+				.flaticon-road:before {
+					font-size: 19px;
+				}
+
+			}
+		}
+		.image {
+			width: 100%;
+			max-width: 246px;
+			height: 100px;
+			background: #000;
+			margin-top: 0;
+		}
+		.amenity {
+			min-height: 48px;
+		}
+	}
+
+	&.card-amenity-menu {
+		margin-bottom: 0;
+		width: 288px;
+
+		.amenity-item {
+			text-align: center;
+			margin-right: 0 !important;
+			margin-bottom: -0.4rem;
+			transition: all .4s ease;
+			z-index: 1;
+			color: #005eb8;
+			display: inline-block;
+			font-family: "futura-pt", sans-serif;
+			text-decoration: none;
+			text-transform: uppercase;
+			height: 48px;
+			width: 58px;
+			padding: 4px;
+
+			.ratingTitle {
+				font-weight: 700;
+				font-size: 0.5rem;
+			}
+
+			.rating {
+				font-weight: 700;
+				font-size: 1rem;
+
+			}
+
+		}
+		.filter-toggle {
+			width: 150px;
+			height: 48px;
+			padding: 0;
+			margin: 0;
+		}
+		.open-toggle {
+			width: 48px;
+			height: 48px;
+			padding: 0;
+			margin: 0;
+		}
+
+	}
+}
+
+#main.toggle,
+#category.toggle,
+.card-top-amenity,
+.card-category {
+	left: -300px;
+}
+
+.card-amenity-menu {
+	left: -248px;
+}
+
+.toggle {
+	position: absolute;
+	appearance: none;
+	cursor: pointer;
+	bottom: 0px;
+	z-index: 10;
+	height: 56px;
+	transition: all .4s ease;
+	border-width: 0;
+
+	&#main {
+		left: -8px;
+		width: 48px;
+
+		&:checked {
+			left: 242px;
+		}
+
+		&:checked~.card-category,
+		&:checked~.card-top-amenity,
+		&:checked~.card-amenity-menu,
+		&:checked~.toggle {
+			left: 0px;
+		}
+	}
+
+	&#category {
+		left: -300px;
+		width: 220px;
+
+		&:checked~.card-top-amenity {
+			display: block;
+		}
+
+		&:checked~.card-category {
+			position: relative;
+			bottom: 0;
+			z-index: 0;
+			opacity: 0;
+
+			& .btn,
+			& .btn>* {
+				height: 0 !important;
+				min-height: 0 !important;
+				font-size: 0 !important;
+				line-height: 0 !important;
+				margin: 0 !important;
+
+			}
+		}
+
+	}
+
+}
+
+
+

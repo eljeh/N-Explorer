@@ -1,0 +1,13 @@
+{
+    "status": 1,
+    "walkscore": 30,
+    "description": "Car-Dependent",
+    "updated": "2019-01-31 21:18:13.734996",
+    "logo_url": "https://cdn.walk.sc/images/api-logo.png",
+    "more_info_icon": "https://cdn.walk.sc/images/api-more-info.gif",
+    "more_info_link": "https://www.redfin.com/how-walk-score-works",
+    "ws_link": "https://www.walkscore.com/score/30-Auburn-Bay-St-SE-Calgary-AB-T3M-2M5/lat=50.884929/lng=-113.948434/?utm_source=bwalk.com&utm_medium=ws_api&utm_campaign=ws_api",
+    "help_link": "https://www.redfin.com/how-walk-score-works",
+    "snapped_lat": 50.8845,
+    "snapped_lon": -113.949
+}

@@ -1,0 +1,253 @@
+@charset "UTF-8";
+.demo-heading {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  padding-top: 3%;
+  margin-left: 7rem;
+}
+
+header,
+.lifestyle-branding {
+  overflow: visible;
+}
+
+.dropdown-menu.show {
+  width: 255px;
+  height: 530px;
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: grey;
+}
+
+.brand-bar.w-map-button .view-map-btn::after {
+  display: none;
+}
+
+#map,
+.map-holder {
+  position: relative;
+  height: 550px;
+  width: 100%;
+}
+
+#map img,
+.map-holder img {
+  margin: 0;
+}
+
+.neighbourhood-container {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  z-index: 1;
+}
+
+.card {
+  background-color: white;
+  padding: 0.75rem 1rem;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  z-index: 1;
+}
+
+.card.card-category {
+  margin-bottom: 0;
+  width: 288px;
+}
+
+.card.card-category .btn-group-vertical > .btn {
+  min-height: 48px;
+  margin-bottom: 4px !important;
+}
+
+.card.card-category .btn-group-vertical > .btn + .btn {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+  min-height: 48px;
+}
+
+.card.card-amenity-menu {
+  margin-bottom: 0;
+  width: 288px;
+}
+
+.card.card-amenity-menu .amenity-item {
+  text-align: center;
+  margin-right: 0 !important;
+  margin-bottom: -0.4rem;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  z-index: 1;
+  color: #005eb8;
+  display: inline-block;
+  font-family: "futura-pt", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 48px;
+  width: 58px;
+  padding: 4px;
+}
+
+.card.card-amenity-menu .amenity-item .ratingTitle {
+  font-weight: 700;
+  font-size: 0.5rem;
+}
+
+.card.card-amenity-menu .amenity-item .rating {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card.card-amenity-menu .open-toggle {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+}
+
+.card-category,
+.card-amenity-menu,
+#toggle {
+  left: -300px;
+}
+
+.card-amenity-menu {
+  left: -248px;
+}
+
+#toggle {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  left: -8px;
+  bottom: 0;
+  z-index: 10;
+  width: 48px;
+  height: 56px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  border-width: 0;
+}
+
+#toggle :after {
+  content: "";
+  font-family: 'Flaticon' !important;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+}
+
+#toggle + label {
+  cursor: pointer;
+  padding: 10px;
+  background: #26ae90;
+  border-radius: 3px;
+  color: #FFF;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+#toggle:checked {
+  left: 242px;
+}
+
+#toggle:checked ~ .card-category,
+#toggle:checked ~ #toggle {
+  left: 0px;
+}
+
+#toggle:checked ~ .card-amenity-menu {
+  left: 0px;
+}
+
+.icon {
+  margin: 4px;
+  width: 48px;
+  height: 48px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.image {
+  width: 100%;
+  height: 100px;
+  background: #000;
+  margin-top: 0;
+}
+
+a[target=_blank]::after {
+  content: none;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.distance {
+  position: absolute;
+  top: 115px;
+  right: 20px;
+}
+
+.btn-outline-primary {
+  border: 1px solid #005eb8;
+  border-bottom: 5px solid #005eb8;
+  border-radius: 0 !important;
+  color: #005eb8;
+  display: inline-block;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-outline-primary:hover {
+  border: 1px solid #004c97;
+  border-bottom: 5px solid #004c97;
+  background: #005eb8;
+}
+
+.card-top-amenity {
+  margin-bottom: 0.5rem;
+  width: 288px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.amenity {
+  min-height: 48px;
+}
+
+.image {
+  width: 100%;
+  max-width: 246px;
+  height: 100px;
+  background: #000;
+  margin-top: 0;
+}
+
+.distance {
+  position: absolute;
+  top: 115px;
+  right: 20px;
+}

@@ -1,0 +1,364 @@
+{
+  "address_components": [
+    {
+      "long_name": "#130",
+      "short_name": "#130",
+      "types": [
+        "subpremise"
+      ]
+    },
+    {
+      "long_name": "19489",
+      "short_name": "19489",
+      "types": [
+        "street_number"
+      ]
+    },
+    {
+      "long_name": "Seton Crescent Southeast",
+      "short_name": "Seton Crescent SE",
+      "types": [
+        "route"
+      ]
+    },
+    {
+      "long_name": "Seton",
+      "short_name": "Seton",
+      "types": [
+        "neighborhood",
+        "political"
+      ]
+    },
+    {
+      "long_name": "Calgary",
+      "short_name": "Calgary",
+      "types": [
+        "locality",
+        "political"
+      ]
+    },
+    {
+      "long_name": "Division No. 6",
+      "short_name": "Division No. 6",
+      "types": [
+        "administrative_area_level_2",
+        "political"
+      ]
+    },
+    {
+      "long_name": "Alberta",
+      "short_name": "AB",
+      "types": [
+        "administrative_area_level_1",
+        "political"
+      ]
+    },
+    {
+      "long_name": "Canada",
+      "short_name": "CA",
+      "types": [
+        "country",
+        "political"
+      ]
+    },
+    {
+      "long_name": "T3M 1T4",
+      "short_name": "T3M 1T4",
+      "types": [
+        "postal_code"
+      ]
+    }
+  ],
+  "adr_address": "<span class=\"street-address\">19489 Seton Crescent SE #130</span>, <span class=\"locality\">Calgary</span>, <span class=\"region\">AB</span> <span class=\"postal-code\">T3M 1T4</span>, <span class=\"country-name\">Canada</span>",
+  "formatted_address": "19489 Seton Crescent SE #130, Calgary, AB T3M 1T4, Canada",
+  "formatted_phone_number": "(403) 278-7336",
+  "geometry": {
+    "location": {
+      "lat": 50.8813735,
+      "lng": -113.95920490000003
+    },
+    "viewport": {
+      "south": 50.8798912197085,
+      "west": -113.96046783029152,
+      "north": 50.8825891802915,
+      "east": -113.9577698697085
+    }
+  },
+  "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+  "id": "94fd7f4ca9c56bd003bfadc8eb19589103a927bc",
+  "international_phone_number": "+1 403-278-7336",
+  "name": "Save-On-Foods",
+  "opening_hours": {
+    "open_now": true,
+    "periods": [
+      {
+        "close": {
+          "day": 0,
+          "time": "2300",
+          "hours": 23,
+          "minutes": 0,
+          "nextDate": 1561352400000
+        },
+        "open": {
+          "day": 0,
+          "time": "0800",
+          "hours": 8,
+          "minutes": 0,
+          "nextDate": 1561298400000
+        }
+      },
+      {
+        "close": {
+          "day": 1,
+          "time": "2300",
+          "hours": 23,
+          "minutes": 0,
+          "nextDate": 1561438800000
+        },
+        "open": {
+          "day": 1,
+          "time": "0800",
+          "hours": 8,
+          "minutes": 0,
+          "nextDate": 1561384800000
+        }
+      },
+      {
+        "close": {
+          "day": 2,
+          "time": "2300",
+          "hours": 23,
+          "minutes": 0,
+          "nextDate": 1561525200000
+        },
+        "open": {
+          "day": 2,
+          "time": "0800",
+          "hours": 8,
+          "minutes": 0,
+          "nextDate": 1561471200000
+        }
+      },
+      {
+        "close": {
+          "day": 3,
+          "time": "2300",
+          "hours": 23,
+          "minutes": 0,
+          "nextDate": 1561611600000
+        },
+        "open": {
+          "day": 3,
+          "time": "0800",
+          "hours": 8,
+          "minutes": 0,
+          "nextDate": 1561557600000
+        }
+      },
+      {
+        "close": {
+          "day": 4,
+          "time": "2300",
+          "hours": 23,
+          "minutes": 0,
+          "nextDate": 1561698000000
+        },
+        "open": {
+          "day": 4,
+          "time": "0800",
+          "hours": 8,
+          "minutes": 0,
+          "nextDate": 1561644000000
+        }
+      },
+      {
+        "close": {
+          "day": 5,
+          "time": "2300",
+          "hours": 23,
+          "minutes": 0,
+          "nextDate": 1561179600000
+        },
+        "open": {
+          "day": 5,
+          "time": "0800",
+          "hours": 8,
+          "minutes": 0,
+          "nextDate": 1561730400000
+        }
+      },
+      {
+        "close": {
+          "day": 6,
+          "time": "2300",
+          "hours": 23,
+          "minutes": 0,
+          "nextDate": 1561266000000
+        },
+        "open": {
+          "day": 6,
+          "time": "0800",
+          "hours": 8,
+          "minutes": 0,
+          "nextDate": 1561212000000
+        }
+      }
+    ],
+    "weekday_text": [
+      "Monday: 8:00 AM – 11:00 PM",
+      "Tuesday: 8:00 AM – 11:00 PM",
+      "Wednesday: 8:00 AM – 11:00 PM",
+      "Thursday: 8:00 AM – 11:00 PM",
+      "Friday: 8:00 AM – 11:00 PM",
+      "Saturday: 8:00 AM – 11:00 PM",
+      "Sunday: 8:00 AM – 11:00 PM"
+    ]
+  },
+  "photos": [
+    {
+      "height": 3036,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/100013552131558733621/photos\">Eugene Tatarskij</a>"
+      ],
+      "width": 4048
+    },
+    {
+      "height": 4032,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/100932883655245061694/photos\">Jeff Kahane</a>"
+      ],
+      "width": 3024
+    },
+    {
+      "height": 4032,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/100012657571348575679/photos\">Juan Canaveral</a>"
+      ],
+      "width": 3024
+    },
+    {
+      "height": 3036,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/100013552131558733621/photos\">Eugene Tatarskij</a>"
+      ],
+      "width": 4048
+    },
+    {
+      "height": 3036,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/108530573050653931318/photos\">K Phipp</a>"
+      ],
+      "width": 4048
+    },
+    {
+      "height": 3456,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/103885009260683153072/photos\">Doug n Susie Yuen</a>"
+      ],
+      "width": 4608
+    },
+    {
+      "height": 1920,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/103412342698876250817/photos\">Russel Blake</a>"
+      ],
+      "width": 1080
+    },
+    {
+      "height": 3036,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/100013552131558733621/photos\">Eugene Tatarskij</a>"
+      ],
+      "width": 4048
+    },
+    {
+      "height": 3024,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/105347255167760223351/photos\">C. Sean Bazin</a>"
+      ],
+      "width": 4032
+    },
+    {
+      "height": 4032,
+      "html_attributions": [
+        "<a href=\"https://maps.google.com/maps/contrib/100932883655245061694/photos\">Jeff Kahane</a>"
+      ],
+      "width": 3024
+    }
+  ],
+  "place_id": "ChIJ_URB4XqdcVMRcvaqZSf6CZ8",
+  "plus_code": {
+    "compound_code": "V2JR+G8 Calgary, Alberta, Canada",
+    "global_code": "9528V2JR+G8"
+  },
+  "rating": 4.1,
+  "reference": "ChIJ_URB4XqdcVMRcvaqZSf6CZ8",
+  "reviews": [
+    {
+      "author_name": "Marc Patel",
+      "author_url": "https://www.google.com/maps/contrib/106860308515998431804/reviews",
+      "language": "en",
+      "profile_photo_url": "https://lh4.googleusercontent.com/-lFGYUHp63hk/AAAAAAAAAAI/AAAAAAAAA_o/GRPr_G3PH9s/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+      "rating": 5,
+      "relative_time_description": "2 months ago",
+      "text": "Laurie at customer service was amazing! We called ahead to ask for help with floral arrangements and she was ready to help when we arrived. She picked out the best bouquet and got it all ready and prepped for us in no time. Truly went above and beyond. Thank you so much!",
+      "time": 1554048519
+    },
+    {
+      "author_name": "tristan hyde",
+      "author_url": "https://www.google.com/maps/contrib/111655344986530403452/reviews",
+      "language": "en",
+      "profile_photo_url": "https://lh3.googleusercontent.com/-B3qUb75parA/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rcxOmIvLTU0zujju2DDcVmQQrC00g/s128-c0x00000000-cc-rp-mo-ba2/photo.jpg",
+      "rating": 5,
+      "relative_time_description": "a month ago",
+      "text": "Mary Anne in the pharmacy is super helpful and kind. I always make a point of going to the save on foods pharmacy because dealing with her is the best. Super knowledgeable too",
+      "time": 1557792596
+    },
+    {
+      "author_name": "Jeff Kahane",
+      "author_url": "https://www.google.com/maps/contrib/100932883655245061694/reviews",
+      "language": "en",
+      "profile_photo_url": "https://lh4.googleusercontent.com/-YS0WDmooBTA/AAAAAAAAAAI/AAAAAAAARYY/5EH9-qdqm-c/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+      "rating": 5,
+      "relative_time_description": "2 months ago",
+      "text": "One of the most beautiful, clean, well stocked grocery store in Calgary.  It looks and feels like a high end grocery but has very competitive prices.  They also boast a smoke house for delicious food to eat in or grab and go. They also have shop for you and delivery service.",
+      "time": 1554728444
+    },
+    {
+      "author_name": "Brain Bananas",
+      "author_url": "https://www.google.com/maps/contrib/106506191209842743870/reviews",
+      "language": "en",
+      "profile_photo_url": "https://lh6.googleusercontent.com/-1HBLMFQd9CI/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdmjVLOgaK2VyKzPE3z-MXV_yYLzw/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+      "rating": 4,
+      "relative_time_description": "a month ago",
+      "text": "Nice grocery store. I've been here a handful of times. Though a bit disappointed with their rotisserie chicken as I found it to be a bit dry. They have a great selection of good very well organized and displayed.",
+      "time": 1558073522
+    },
+    {
+      "author_name": "Jennifer McGuire",
+      "author_url": "https://www.google.com/maps/contrib/115253457914227513700/reviews",
+      "language": "en",
+      "profile_photo_url": "https://lh3.googleusercontent.com/-v8iil6EcqmU/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rd5kibRJPRuJhnql7_diAAieVEAIg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+      "rating": 5,
+      "relative_time_description": "4 weeks ago",
+      "text": "Love the selection of food. Staff are friendly and helpful. Very clean",
+      "time": 1558722878
+    }
+  ],
+  "scope": "GOOGLE",
+  "types": [
+    "grocery_or_supermarket",
+    "pharmacy",
+    "health",
+    "food",
+    "store",
+    "point_of_interest",
+    "establishment"
+  ],
+  "url": "https://maps.google.com/?cid=11459965773937309298",
+  "user_ratings_total": 494,
+  "utc_offset": -360,
+  "vicinity": "19489 Seton Crescent Southeast #130, Calgary",
+  "website": "https://www.saveonfoods.com/store/seton/",
+  "html_attributions": []
+}

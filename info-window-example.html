@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img
+          src="https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sCmRaAAAAZSHP4YtAHH0zWj6xSlsnvl1ZeMkETClIzi1OF4D99c3YPc3D1uqnvEZWA2ZhAuwvqL5XQ-qr_VK0adxGV0hizh5NQzlXqPpxFatzKxaCKgHoJ4ySqa7aypDPK3bd_MMtEhA_Tao4RkuzqI42XOpf1KOIGhRH-5Jqt_lar1h7JaXf__zM0tFFTA&3u2988&5m1&2e1&callback=none&key=AIzaSyDZUXfv2E1crCqQLWkM0LEeRztM3d8g2Sg&token=65611"
+          class="card-img" alt="Save-On-Foods">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title">Save-On-Foods</h4>
+          <h5 class="rating"></h5>
+          <h5 class="open-now"></h5>
+          <address>
+            19489 Seton Crescent SE #130, Calgary, AB T3M 1T4, Canada<br>
+            <a class="card-link" href="tel:(403) 278-7336">(403) 278-7336</a>
+            <a class="card-link" href="https://www.saveonfoods.com/store/seton/" target="_blank">Website</a>
+          </address>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var rating = 4.1;
+    var openNow = false;
+
+
+    var ratings = '';
+    for (var i = 1; i <= 5; i++) {
+      var className = ((rating > i) ? 'active' : '');
+      var icon = ((rating > i) ? '★' : '☆');
+      ratings += '<span class="' + className + '">' + icon + '</span>';
+    }
+    document.querySelector('.rating').innerHTML = ratings;
+
+    document.querySelector('.open-now').innerText = openNow ? 'Open' : 'Closed';
+
+  </script>
+
+</body>
+
+</html>
